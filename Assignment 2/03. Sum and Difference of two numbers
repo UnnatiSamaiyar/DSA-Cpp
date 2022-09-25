@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(){
+    int n1,n2;
+    float f1,f2;
+    
+    scanf("%d%d%f%f",&n1,&n2,&f1,&f2);
+    
+    int sum_of_integers=n1+n2;
+    int difference_of_integers=n1-n2;
+    float sum_of_float=f1+f2;
+    float difference_of_float=f1-f2;
+    
+    printf("%d %d\n%0.1f %0.1f",sum_of_integers,difference_of_integers,sum_of_float,difference_of_float);
+}
