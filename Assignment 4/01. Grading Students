@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    
+    int grades[n];
+    
+    for(int i=0; i<n; i++){
+        cin>>grades[i];
+    }
+    
+    int temp;
+    for(int i=0; i<n; i++){
+        temp = grades[i];
+        while(grades[i]%5!=0){
+            grades[i]++;
+        }
+        if(grades[i]-temp>=3 || grades[i]<38){
+            grades[i]=temp;
+        }
+    }
+    for(int i=0; i<n; i++){
+        cout<<grades[i]<<endl;
+    }
+}
