@@ -29,15 +29,16 @@ void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vecto
             count1++; 
         }
     }
-    cout<<count1;
-    for(int i=0;i<apples.size();i++){
+    for(int i=0;i<oranges.size();i++){
         sum_of_oranges=b+oranges[i];
         if(s<=sum_of_oranges && sum_of_oranges<=t){
             count2++;
         }    
     }
+    cout<<count1;
     cout<<endl;
     cout<<count2;
+    cout<<endl;
 }
 
 int main()
