@@ -1,0 +1,18 @@
+SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* llist, int position) {
+    if(position<0){
+        return llist;
+    }
+    if(position==0 && llist){
+        return llist->next;
+    }
+    int count=1;
+    SinglyLinkedListNode *curr = llist;
+    while(count<position && llist){
+        curr = curr->next;
+        count++; 
+    }
+    if(curr!=nullptr){
+        curr->next = curr->next->next;
+    }
+    return llist;
+}
