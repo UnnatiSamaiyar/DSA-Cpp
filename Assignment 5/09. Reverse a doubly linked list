@@ -1,0 +1,15 @@
+DoublyLinkedListNode* reverse(DoublyLinkedListNode* llist) {
+    DoublyLinkedListNode* start = llist;
+    DoublyLinkedListNode* end;
+    while(start!=nullptr){
+        DoublyLinkedListNode* temp = start->next;
+        start->next = start->prev;
+        start->prev = temp;
+        if(temp == nullptr){
+            end = llist;
+            llist = start;
+        }
+        start = temp;
+    }
+    return llist;
+}
